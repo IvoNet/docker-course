@@ -1,7 +1,7 @@
 {
   "name": "front-end",
   "version": "0.0.0",
-  "license": "MIT",
+  "license": "DBAD",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!--
+  ~ DON'T BE A DICK PUBLIC LICENSE
+  ~
+  ~ Version 1, December 2009
+  ~
+  ~ Copyright (C) 2018 IvoNet.nl <WebMaster@ivonet.nl>
+  ~
+  ~  Everyone is permitted to copy and distribute verbatim or modified
+  ~  copies of this license document, and changing it is allowed as long
+  ~  as the name is changed.
+  ~
+  ~ > DON'T BE A DICK PUBLIC LICENSE
+  ~ > TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+  ~
+  ~  1. Do whatever you like with the original work, just don't be a dick.
+  ~
+  ~      Being a dick includes - but is not limited to - the following instances:
+  ~
+  ~ 	 1a. Outright copyright infringement - Don't just copy this and change the name.
+  ~ 	 1b. Selling the unmodified original with no work done what-so-ever, that's REALLY being a dick.
+  ~ 	 1c. Modifying the original work to contain hidden harmful content. That would make you a PROPER dick.
+  ~
+  ~  2. If you become rich through modifications, related works/services, or supporting the original work,
+  ~  share the love. Only a dick would make loads off this work and not buy the original work's
+  ~  creator(s) a pint.
+  ~
+  ~  3. Code is provided with no warranty. Using somebody else's code and bitching when it goes wrong makes
+  ~  you a DONKEY dick. Fix the problem yourself. A non-dick would submit the fix back.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>nl.ordina</groupId>
     <artifactId>back-end</artifactId>
@@ -24,17 +55,21 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.easymock</groupId>
-            <artifactId>easymock</artifactId>
-            <version>3.1</version>
-            <scope>test</scope>
-        </dependency>
-
-
     </dependencies>
     <build>
         <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <warName>${build.finalName}</warName>
+                    <outputDirectory>artifact</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
