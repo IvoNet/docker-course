@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+docker build -t TODO registry/ordina/mysql .
+docker push TODO registry/ordina/mysql
