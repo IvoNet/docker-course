@@ -34,3 +34,4 @@ Thumbs.db
 node_modules
 .DS_Store
 target
+volumes

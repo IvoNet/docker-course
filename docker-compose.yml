@@ -1,12 +1,19 @@
 version: '3'
 
 services:
-  mysql:
-    build:
+#  mysql:
+#    image: mysql:5.7.16
+#    volumes:
+#      - mysql-data:/var/lib/mysql
+#    ports:
+#      - "3306:3306"
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=secret
 
+  mysql:
     image: localhost:5000/mysql
     volumes:
-      - ./mysql/setup:/docker-entrypoint-initdb.d
+      - ./mysql/quotes:/docker-entrypoint-initdb.d
       - ./volumes/testdata/mysql:/testdata
       - mysql-data:/var/lib/mysql
     ports:
@@ -15,17 +22,24 @@ services:
       - MYSQL_ROOT_PASSWORD=secret
 
   phpmyadmin:
-      image: localhost:5000/phpmyadmin
-      ports:
-        - "8888:80"
-      links:
-        - mysql:mysql
-      environment:
-        - MYSQL_USERNAME=root
-        - MYSQL_ROOT_PASSWORD=secret
-        - PMA_HOST=mysql
-      depends_on:
-        - mysql
+    image: localhost:5000/phpmyadmin
+    ports:
+      - "8888:80"
+    links:
+      - mysql:mysql
+    environment:
+      - MYSQL_USERNAME=root
+      - MYSQL_ROOT_PASSWORD=secret
+      - PMA_HOST=mysql
+    depends_on:
+      - mysql
+
+  frontend:
+    image: localhost:5000/server
+    ports:
+      - "3000:3000"
+    links:
+      - mysql:mysql
 
 volumes:
   mysql-data:

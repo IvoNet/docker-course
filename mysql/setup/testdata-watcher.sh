@@ -16,6 +16,7 @@ inotifywait -m $TEST_DIR -e create |
             echo "Executing sql file..."
             ${mysql[@]} < "$path$file"
             rm -fv "$path$file"
+            sed -i 's/mysql.*//g' testdata.*.log
         else
             echo "The file does not seem to be an sql file... ignoring."
         fi
