@@ -2,15 +2,17 @@
 
 This project contains the code needed for my docker course.
 
+## Resources
+
+* [PhpMyAdmin](http://localhost:8888/)
+* [Payara Admin Console](http://localhost:4848)
+* [Web page](http://localhost:3000)
+* [Rest Service](http://localhost:8080/back-end/rest/quote/1)
+
+
 ## web
 
-creation: 
-```bash
-npm install -g @angular/cli
-ng new front-end --skip-git --verbose
-```
-
-* [front-end readme](angular/README.md)
+Simple nodejs server with simple html page
 
 ## back-end
 

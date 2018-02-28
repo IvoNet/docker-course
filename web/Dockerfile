@@ -11,6 +11,7 @@ RUN apk add --update \
 
 COPY server.js .
 COPY index.html .
+COPY quote.json .
 
 EXPOSE 3000
 ENTRYPOINT ["/usr/bin/node", "server.js", "3000"]

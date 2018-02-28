@@ -28,21 +28,41 @@
  *  you a DONKEY dick. Fix the problem yourself. A non-dick would submit the fix back.
  */
 
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+package nl.ordina.service;
 
+import nl.ordina.model.Quote;
 
-import { AppComponent } from './app.component';
+import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriInfo;
 
+import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+/**
+ * @author Ivo Woltring
+ */
+@Path("/quote")
+@Stateless
+public class QuoteService {
+
+    @PersistenceContext(unitName = "quote_dbPU")
+    private EntityManager em;
+
+    @Context
+    private UriInfo uriInfo;
+
+    @GET
+    @Path(value = "{id}")
+    @Produces(APPLICATION_JSON)
+    public Response get(@PathParam("id") Integer id) {
+        final Quote quote = em.find(Quote.class, id);
+        return Response.ok(quote).build();
+    }
+}

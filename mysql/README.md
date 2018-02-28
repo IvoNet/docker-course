@@ -6,9 +6,9 @@ This image is tuned to monitor a TEST_DIR folder file up and running.
 if you put sql files into this folder they will be executed on the database
 and when done removed.
 
-## How to build
+## build
 
-* Run `build` from this folder
+* Run `build.sh` from this folder
 
 
 ## Usage
