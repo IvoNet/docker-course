@@ -1,0 +1,19 @@
+{
+  "name": "simple_server",
+  "version": "1.0.0",
+  "description": "Just a simple static server",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js 8080",
+    "start": "node server.js"
+  },
+  "author": "Ivo Woltring",
+  "license": "WTFPL",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "fs-walk": "0.0.2",
+    "httpd": "0.0.2",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}

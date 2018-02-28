@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-docker build -t TODO registry/ordina/mysql .
-docker push TODO registry/ordina/mysql
+docker build -t localhost:5000/mysql .
+docker push localhost:5000/mysql
+docker_dangling

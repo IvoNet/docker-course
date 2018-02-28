@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
   ~ DON'T BE A DICK PUBLIC LICENSE
   ~
@@ -28,9 +29,28 @@
   ~  you a DONKEY dick. Fix the problem yourself. A non-dick would submit the fix back.
   -->
 
-<!--The content below is only a placeholder and can be replaced.-->
-  <h1>
-    Hi {{ title }}!
-  </h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Docker Course</title>
+</head>
+<body>
+<h1>Quote of the day...</h1>
 
+<div id="content">
+    Hello, World
+</div>
 
+<button type="submit" onclick="httpGet()">Search</button>
+
+<script>
+    function httpGet() {
+        var req = new XMLHttpRequest();
+        req.open("GET", "http://localhost:3000/quote", false); // false for synchronous request
+        req.send(null);
+        var resp = JSON.parse(req.responseText);
+        document.getElementById("content").innerHTML = resp.quote;
+    }
+</script>
+</body>
+</html>
