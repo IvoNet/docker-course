@@ -10,3 +10,22 @@ and when done removed.
 
 * Run `build` from this folder
 
+
+## Usage
+
+```text
+version: '3'
+
+services:
+  mysql:
+    image: localhost:5000/mysql
+    volumes:
+      - ./mysql/setup:/docker-entrypoint-initdb.d
+      - ./volumes/testdata/mysql:/testdata
+      - mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+
+```

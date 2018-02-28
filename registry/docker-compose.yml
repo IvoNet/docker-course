@@ -12,3 +12,4 @@ services:
 
 volumes:
   registry_volume:
+    driver: local

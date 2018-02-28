@@ -30,4 +30,3 @@ is a specialized docker image with mysql installed
  
 ## License
 
-Copyright

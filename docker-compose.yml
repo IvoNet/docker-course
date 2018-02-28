@@ -2,6 +2,8 @@ version: '3'
 
 services:
   mysql:
+    build:
+
     image: localhost:5000/mysql
     volumes:
       - ./mysql/setup:/docker-entrypoint-initdb.d
