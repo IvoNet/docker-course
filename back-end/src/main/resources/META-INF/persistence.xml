@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://www.oracle.com/webfolder/technetwork/jsc/xml/ns/persistence/persistence_2_1.xsd" version="2.1">
+
+    <persistence-unit name="quote_dbPU" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <jta-data-source>jdbc/quote_db</jta-data-source>
+        <properties>
+            <!--<property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>-->
+            <property name="eclipselink.logging.level" value="ALL"/>
+
+            <!--<property name="javax.persistence.schema-generation.scripts.action" value="drop-and-create"/>-->
+            <!--<property name="javax.persistence.schema-generation.scripts.create.target" value="create.ddl"/>-->
+            <!--<property name="javax.persistence.schema-generation.scripts.drop.target" value="drop.ddl"/>-->
+            <!--<property name="eclipselink.logging.level" value="FINE"/>-->
+            <!--<property name="eclipselink.logging.file" value="eclipselink.log"/>-->
+
+            <!--<property name="eclipselink.ddl-generation" value="drop-and-create-tables"/>-->
+            <!--<property name="eclipselink.ddl-generation.output-mode" value="sql-script"/>-->
+            <!--<property name="eclipselink.ddl-generation.output-mode" value="database"/>-->
+            <!--<property name="eclipselink.application-location" value="./target/ddl"/>-->
+            <!--<property name="eclipselink.create-ddl-jdbc-file-name" value="create.sql"/>-->
+            <!--<property name="eclipselink.drop-ddl-jdbc-file-name" value="drop.sql"/>-->
+
+            <!--<property name="eclipselink.jdbc.url" value=""/>-->
+            <!--<property name="eclipselink.jdbc.driver" value=""/>-->
+            <!--<property name="eclipselink.jdbc.user" value=""/>-->
+            <!--<property name="eclipselink.jdbc.password" value=""/>-->
+        </properties>
+    </persistence-unit>
+</persistence>
+

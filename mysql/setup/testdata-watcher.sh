@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+LOG=$TEST_DIR/"testdata.$(date +"%y-%m-%d").log"
 echo "testdata-watcher started watching $TEST_DIR..."
 mysql=( mysql --protocol=socket -uroot -hlocalhost --socket=/var/run/mysqld/mysqld.sock)
 
@@ -16,7 +17,7 @@ inotifywait -m $TEST_DIR -e create |
             echo "Executing sql file..."
             ${mysql[@]} < "$path$file"
             rm -fv "$path$file"
-            sed -i 's/mysql.*//g' testdata.*.log
+            sed -i 's/mysql.*//g' ${LOG}
         else
             echo "The file does not seem to be an sql file... ignoring."
         fi

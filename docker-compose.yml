@@ -34,12 +34,43 @@ services:
     depends_on:
       - mysql
 
-  frontend:
+  payara:
     image: localhost:5000/server
+    ports:
+      - "8080:8080"
+      - "4848:4848"
+      - "8181:8181"
+      - "8009:8009"
+    links:
+      - mysql:mysql
+    depends_on:
+      - mysql
+    volumes:
+      - ./back-end/artifact:/opt/payara41/glassfish/domains/domain1/autodeploy
+
+#  payara:
+#    image: localhost:5000/payara
+#    ports:
+#      - "8080:8080"
+#      - "4848:4848"
+#      - "8181:8181"
+#      - "8009:8009"
+#    links:
+#      - mysql:mysql
+#    depends_on:
+#      - mysql
+#    volumes:
+#      - ./back-end/artifact:/opt/payara41/glassfish/domains/domain1/autodeploy
+#      - ./volumes/payara/lib:/opt/payara41/glassfish/domains/domain1/lib
+#
+  frontend:
+    image: localhost:5000/web
     ports:
       - "3000:3000"
     links:
-      - mysql:mysql
+      - payara
+    depends_on:
+      - payara
 
 volumes:
   mysql-data:

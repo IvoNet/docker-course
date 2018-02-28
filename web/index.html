@@ -44,9 +44,12 @@
 <button type="submit" onclick="httpGet()">Search</button>
 
 <script>
+    "use strict";
+
     function httpGet() {
         var req = new XMLHttpRequest();
-        req.open("GET", "http://localhost:3000/quote", false); // false for synchronous request
+        req.open("GET", "http://payara:8080/back-end/rest/hello", false); // false for synchronous request
+        // req.open("GET", "http://localhost:3000/quote", false); // false for synchronous request
         req.send(null);
         var resp = JSON.parse(req.responseText);
         document.getElementById("content").innerHTML = resp.quote;

@@ -1,3 +1,5 @@
+
+CREATE DATABASE if NOT EXISTS `quote`;
 USE quote;
 DROP TABLE IF EXISTS `quote`;
 
