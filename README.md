@@ -2,10 +2,39 @@
 
 This project contains the code needed for my docker course.
 
+# Usage
 
-## Usage
+To get to the starting point of this course is to start with `startup.sh`.
+That will start the registry and Scooch the presentation app
 
-This
+## back-end
+
+A simple Java EE application providing quotes through a REST interface.
+The application gets its quotes from a database through the Java Persisitence Api (JPA).  
+
+Read more [here](./back-end/README.md)
+
+## mysql
+
+Is a specialized docker image with mysql installed. You can read more about it [here](./mysql/README.md)
+
+## payara
+
+Is a full blown Java EE application server used to serve our back-end.
+[here](./payara/README.md) you can get a full description
+
+## presentation
+
+The [Scooch](http://ivo2u.nl/Yi) markdown presentation to this course. Read more [here](./presentation/README.md)
+
+## registry
+
+The local docker registry. Read more [here](./registry/README.md)
+
+## web
+
+The fantastic web interface :-). Read more [here](./web/README.md)
+
 
 ## Resources
 
@@ -19,19 +48,7 @@ This
 
 Simple nodejs server with simple html page
 
-## back-end
 
-Is a standard java EE application with some simple functions 
-and a connection to a database
-
-* [back-end Readme](./back-end/README.md)
-
-## mysql
-
-is a specialized docker image with mysql installed
-
-* [MySQL Readme](./mysql/README.md)
- 
  
 ## License
     
