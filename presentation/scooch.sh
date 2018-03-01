@@ -30,6 +30,7 @@ if [ $? -eq 1 ] || [ "$RUNNING" == "false" ]; then
   docker-compose up -d
   /usr/bin/osascript -e 'display notification "Please refresh the page in a few seconds..." with title "Scooch" subtitle "Starting..."'
   # add scooch to /etc/hosts
+  sleep 2
   open http://scooch
 else
   /usr/bin/osascript -e 'display notification "Stopping..." with title "Scooch"'

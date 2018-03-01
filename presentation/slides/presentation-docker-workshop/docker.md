@@ -46,12 +46,10 @@ Note:
 - Virtual machines waste resources
 - Docker containers are kinda lightweight vm
 
---- 
-
+---
 # Image
 
 ---
-
 # Container
 
 
@@ -102,12 +100,20 @@ Note:
 - MAINTAINER (deprecated use label)
 ---
 
+# docker-compose
+
+---
+
+<img src="compose.png" style="width:100%;height:100%;display: block;margin: 0 auto;"/>
+
+---
+
 # Security
 
 Note:
 - base image
 - Root
-
+- do you trust the creator?
 
 ---
 # ?

@@ -1,1 +1,16 @@
-{"controls":false,"mouseWheel":false,"slideNumber":false,"presenterNotes":false,"center":true,"progress":false,"history":true,"theme":"white","template":"codesmith","transition":"convex","disableChalkboard":false,"replayChalkboard":true,"autoSlide":0,"loop":false}
+{
+  "controls": false,
+  "mouseWheel": false,
+  "slideNumber": false,
+  "presenterNotes": false,
+  "center": true,
+  "progress": false,
+  "history": true,
+  "theme": "white",
+  "template": "codesmith",
+  "transition": "convex",
+  "disableChalkboard": false,
+  "replayChalkboard": true,
+  "autoSlide": 0,
+  "loop": false
+}
