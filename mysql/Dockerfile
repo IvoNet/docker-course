@@ -1,5 +1,6 @@
 FROM mysql:5.7.16
-MAINTAINER Ivo Woltring <webmaster@ivonet.nl>
+
+LABEL maintainer="Ivo Woltring <webmaster@ivonet.nl>"
 
 ENV TEST_DIR=/testdata
 

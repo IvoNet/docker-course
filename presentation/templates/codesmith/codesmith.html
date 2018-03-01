@@ -1,0 +1,71 @@
+<!doctype html>
+
+<!--
+  ~ DON'T BE A DICK PUBLIC LICENSE
+  ~
+  ~ Version 1, December 2009
+  ~
+  ~ Copyright (C) 2018 IvoNet.nl <WebMaster@ivonet.nl>
+  ~
+  ~  Everyone is permitted to copy and distribute verbatim or modified
+  ~  copies of this license document, and changing it is allowed as long
+  ~  as the name is changed.
+  ~
+  ~ > DON'T BE A DICK PUBLIC LICENSE
+  ~ > TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+  ~
+  ~  1. Do whatever you like with the original work, just don't be a dick.
+  ~
+  ~      Being a dick includes - but is not limited to - the following instances:
+  ~
+  ~ 	 1a. Outright copyright infringement - Don't just copy this and change the name.
+  ~ 	 1b. Selling the unmodified original with no work done what-so-ever, that's REALLY being a dick.
+  ~ 	 1c. Modifying the original work to contain hidden harmful content. That would make you a PROPER dick.
+  ~
+  ~  2. If you become rich through modifications, related works/services, or supporting the original work,
+  ~  share the love. Only a dick would make loads off this work and not buy the original work's
+  ~  creator(s) a pint.
+  ~
+  ~  3. Code is provided with no warranty. Using somebody else's code and bitching when it goes wrong makes
+  ~  you a DONKEY dick. Fix the problem yourself. A non-dick would submit the fix back.
+  -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Scooch</title>
+    <link rel="stylesheet" href="/node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="/plugins/chalkboard/chalkboard.css">
+    <link rel="stylesheet" href="/plugins/spreadsheet/spreadsheet.css">
+    <link rel="stylesheet" href="/presentation/templates/ivonet/ivonet.css" id="theme">
+    <link rel="stylesheet" href="/node_modules/reveal.js/lib/css/zenburn.css">
+    <script src="/app/querystring.js"></script>
+    <script>
+        document.write('<link rel="stylesheet" href="/node_modules/reveal.js/css/print/' +
+                       ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) +
+                       '.css" type="text/css" media="print">');
+        document.getElementById('theme').setAttribute('href', QueryString.theme);
+        document.title = "Scooch - " + QueryString.title;
+    </script>
+    <!--[if lt IE 9]>
+    <script src="/node_modules/reveal.js/lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div style="position: fixed; top: 0; width:100%;">
+    <img src="/presentation/templatesion/templates/codesmith/codesmith.svg" style="float: right; width:5%" >
+</div>
+<div class="reveal">
+    <div class="slides" id="ivonet-slides">
+        <script>
+            document.write('<section data-markdown="' + QueryString.slideshow +
+                           '" data-separator="^---$" data-separator-vertical="^----$" data-separator-notes="^Note:"></section>')
+        </script>
+    </div>
+</div>
+<script src="/plugins/spreadsheet/ruleJS.all.full.min.js"></script>
+<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script src="/node_modules/reveal.js/lib/js/head.min.js"></script>
+<script src="/node_modules/reveal.js/js/reveal.js"></script>
+<script src="/app/ivonet-reveal.js"></script>
+</body>
+</html>

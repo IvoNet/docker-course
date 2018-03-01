@@ -1,0 +1,169 @@
+/**
+ * Codesmith theme for reveal.js.
+ *
+ * By @ivonet
+ */
+
+
+// Default mixins and settings -----------------
+@import "./node_modules/reveal.js/css/theme/template/mixins";
+@import "./node_modules/reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(/node_modules/reveal.js/lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFontSize: 24px;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+    &, h1, h2, h3, h4, h5, h6 {
+        color: #fff;
+    }
+}
+
+// Theme template ------------------------------
+@import "./node_modules/reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+
+// Ordina overrides ----------------------------
+.reveal {
+    text-align: left;
+}
+
+.reveal section {
+    text-align: left;
+}
+
+.reveal h2 {
+    padding-left: 10px;
+    padding-bottom:10px;
+    text-transform: none;
+    border-bottom-style:solid;
+    border-bottom-color:#e98300;
+    border-bottom-width: 4px;
+    color: black;
+}
+
+.reveal em {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+.reveal ul {
+    list-style-type: square;
+    text-align: left;
+
+}
+
+.reveal table {
+    float: left;
+}
+
+.reveal table th {
+    font-weight: normal; }
+
+.reveal section img {
+    border: 0px;
+    box-shadow: none;
+}
+/***********************************************
+ * Twee kolomen layout
+ ***********************************************/
+
+section .begin-two-columns ~ h2,
+section .begin-two-columns ~ h2 + p {
+    width: 100%;
+    clear: both;
+}
+
+section .begin-two-columns ~ h3,
+section .begin-two-columns ~ p,
+section .begin-two-columns ~ .right-column,
+section .begin-two-columns ~ pre {
+    width: 50%;
+}
+
+section .begin-two-columns ~ h3,
+section .begin-two-columns ~ p {
+    float: left;
+    box-sizing: border-box;
+    padding-right: 1rem;
+    clear: both;
+}
+
+section .begin-two-columns ~ .right-column,
+section .begin-two-columns ~ pre {
+    float: right;
+    clear: right;
+    margin-bottom: 1rem;
+}
+
+.end-two-columns {
+    clear: both;
+}
+
+section .end-two-columns ~ p,
+section .end-two-columns ~ h3,
+section .end-two-columns ~ .right-column,
+section .end-two-columns ~ pre {
+    width: auto;
+    float: none;
+    clear: none;
+}
+
+/**************************************************************************
+ * Image styling
+ **************************************************************************/
+img.image25 {
+    width :25%;
+}
+
+img.image50 {
+    width :50%;
+}
+img.image75 {
+    width :75%;
+}
+img.image100 {
+    width :100%;
+}
+
+#slide-footer {
+   position: fixed;
+   bottom: 0px;
+   width: 100%;
+}
+
+#slide-footer td {
+  background-color: white;
+}
+
+hr.style-bottom {
+    height: 12px;
+    border: 0px;
+    box-shadow: inset 0px 12px 12px -12px rgba(0, 0, 0, 0.5);
+}

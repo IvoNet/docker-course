@@ -1,6 +1,6 @@
 FROM localhost:5000/payara
 
-MAINTAINER IvoNet
+LABEL maintainer="IvoNet"
 
 COPY ./target/dependency/mysql-connector-java-5.1.42.jar /opt/payara41/glassfish/domains/domain1/lib
 
