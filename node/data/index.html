@@ -10,26 +10,18 @@
 <div id="content">
     Hello, World
 </div>
-<div id="author">
 
-</div>
-
-<p>
-    <input id="quote" type="text" value="1"/>
-    <button type="submit" onclick="httpGet()">Quote</button>
-</p>
+<button type="submit" onclick="httpGet()">Search</button>
 
 <script>
     "use strict";
 
     function httpGet() {
-        var value = document.getElementById("quote").value;
         var req = new XMLHttpRequest();
-        req.open("GET", "http://localhost:8080/back-end/rest/quote/" + value, false); // false for synchronous request
+        req.open("GET", "http://localhost:8080/back-end/rest/quote/1", false); // false for synchronous request
         req.send(null);
         var resp = JSON.parse(req.responseText);
         document.getElementById("content").innerHTML = resp.quote;
-        document.getElementById("author").innerHTML = "--" + resp.author;
     }
 </script>
 </body>

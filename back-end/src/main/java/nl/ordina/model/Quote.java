@@ -30,6 +30,8 @@
 
 package nl.ordina.model;
 
+import lombok.Data;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -37,6 +39,7 @@ import javax.persistence.Table;
 /**
  * @author Ivo Woltring
  */
+@Data
 @Entity
 @Table(name = "quote")
 public class Quote {
@@ -50,23 +53,5 @@ public class Quote {
         return this.id;
     }
 
-    public void setId(final Integer id) {
-        this.id = id;
-    }
 
-    public String getAuthor() {
-        return this.author;
-    }
-
-    public void setAuthor(final String author) {
-        this.author = author;
-    }
-
-    public String getQuote() {
-        return this.quote;
-    }
-
-    public void setQuote(final String quote) {
-        this.quote = quote;
-    }
 }

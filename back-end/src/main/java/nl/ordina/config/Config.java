@@ -28,48 +28,22 @@
  *  you a DONKEY dick. Fix the problem yourself. A non-dick would submit the fix back.
  */
 
-package nl.ordina.service;
+package nl.ordina.config;
 
-import nl.ordina.model.Quote;
-
-import javax.ejb.Stateless;
-import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
-
+import javax.enterprise.inject.Produces;
+import javax.enterprise.inject.spi.InjectionPoint;
 import java.util.logging.Logger;
 
-import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
+import static java.util.logging.Logger.getLogger;
 
-/**
- * @author Ivo Woltring
- */
-@Path("/quote")
-@Stateless
-public class QuoteService {
+public class Config {
 
-    @PersistenceContext(unitName = "quote_dbPU")
-    private EntityManager em;
-
-    @Context
-    private UriInfo uriInfo;
-
-    @Inject
-    private Logger log;
-
-    @GET
-    @Path(value = "{id}")
-    @Produces(APPLICATION_JSON)
-    public Response get(@PathParam("id") Integer id) {
-        final Quote quote = em.find(Quote.class, id);
-        this.log.info(quote.toString());
-        return Response.ok(quote).build();
+    @Produces
+    public Logger loggerExposer(final InjectionPoint ip) {
+        return getLogger(ip.getMember()
+                .getDeclaringClass()
+                .getName());
     }
+
+
 }
