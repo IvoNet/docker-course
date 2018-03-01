@@ -38,16 +38,6 @@
     <packaging>pom</packaging>
     <dependencies>
 
-        <!--
-        This pom is used in the setup.sh file to get the postgres dependency.
-        This dependency is to be added to the lib directory of Glassfish.
-        -->
-
-        <!--<dependency>-->
-            <!--<groupId>org.postgresql</groupId>-->
-            <!--<artifactId>postgresql</artifactId>-->
-            <!--<version>9.4-1201-jdbc41</version>-->
-        <!--</dependency>-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
