@@ -19,11 +19,48 @@ Ordina JTech
 # Whaaat???
 
 ---
+# Why?
+
+Note:
+- Maintenance
+- Modular build
+- Free technology choice (language / tools / os)
+- bugs isolated
+
+---
 
 > It works on my machine!
 
 Note:
 - Consistency of env during lifecycle app
+
+---
+
+Virtual Machine
+
+vs
+
+Docker
+
+Note:
+- Virtual machines waste resources
+- Docker containers are kinda lightweight vm
+
+---
+# Image
+
+---
+# Container
+
+
+Note:
+- Runtime version of the image (Session)
+---
+
+# Registry / hub
+
+Note:
+- Show hub.docker.com
 
 ---
 # Flow
@@ -41,6 +78,18 @@ Dockerfile > Git repo > CI / CD > building > testing > staging > production
 
 ---
 
+# Dockerfile
+
+```dockerfile
+FROM alpine
+
+LABEL maintainer="@IvoNet"
+
+CMD ["echo", "Hello, Wold."]
+
+```
+---
+
 <img src="dockerfile.png" style="width:50%;height:50%;display: block;margin: 0 auto;"/>
 
 Note:
@@ -49,10 +98,13 @@ Note:
 - ADD also urls
 - COPY basic copy (prefered)
 - MAINTAINER (deprecated use label)
+---
+
+# docker-compose
 
 ---
 
-<img src="docker-compose.png" style="width:100%;height:100%;display: block;margin: 0 auto;"/>
+<img src="compose.png" style="width:100%;height:100%;display: block;margin: 0 auto;"/>
 
 ---
 
@@ -72,8 +124,6 @@ https://www.ivonet.nl
 Twitter: @ivonet  
 
 ---
-# GitHub
+# Resource
 
-# https://github.com/IvoNet/docker-course
-or
-# http://ivo2u.nl/YX
+* [Best Practices](http://ivo2u.nl/Yv)
