@@ -2,6 +2,12 @@
 
 This project contains the code needed for my docker course.
 
+# Important note
+
+This course was developed on a Mac and therefore it will only have bash scripts.
+You might have to do some translations when using Windows as the operating system.
+No support will be provided.
+
 # Usage
 
 To get to the starting point of this course is to start with `startup.sh`.

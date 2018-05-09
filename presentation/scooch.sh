@@ -14,14 +14,14 @@
 #########################################################################
 # Edit the line below to point to the folder where you have your slides #
 # and your docker-compose.yml file                                      #
-LOCATION=$(pwd)/slides
+LOCATION="$(pwd)/slides"
 #########################################################################
 
 
 #########################################################################
 ## Do not edit below this line
 #########################################################################
-cd $LOCATION
+cd "$LOCATION"
 
 # do not edit below
 RUNNING=$(docker inspect --format="{{ .State.Running }}" scooch 2> /dev/null)
