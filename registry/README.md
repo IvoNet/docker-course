@@ -15,11 +15,11 @@ This will download and push the needed images to the local registry
 
 ## Cleanup
 
-To cleanup the whole registry just run:
+To cleanup the whole registry just run from the root of this project:
 
 ```bash
 docker-compose down -v
-#or
+#or from the registry folder
 teardown.sh
 ```
 
@@ -27,7 +27,7 @@ teardown.sh
 
 ## backup.sh
 
-Will backup the docker regitry volume to a backup folder
+Will backup the docker registry volume to a backup folder
 
 ## restore.sh
 

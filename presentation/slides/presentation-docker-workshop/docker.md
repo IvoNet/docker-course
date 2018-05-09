@@ -74,6 +74,8 @@ Twitter: @ivonet
 ---
 # GitHub
 
-# https://github.com/IvoNet/docker-course
+https://github.com/IvoNet/docker-course
+
 or
-# http://ivo2u.nl/YX
+
+http://ivo2u.nl/YX
