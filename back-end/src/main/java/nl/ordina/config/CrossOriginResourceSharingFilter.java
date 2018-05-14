@@ -1,5 +1,3 @@
-
-
 package nl.ordina.config;
 
 import javax.ws.rs.container.ContainerRequestContext;

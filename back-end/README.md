@@ -89,7 +89,7 @@ services:
     depends_on:
       - mysql
     volumes:
-      - ./back-end/artifact:/opt/payara41/glassfish/domains/domain1/autodeploy
+      - ./back-end/artifact:/opt/payara5/glassfish/domains/domain1/autodeploy
 
 volumes:
   mysql-data:

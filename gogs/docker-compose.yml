@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  mysql:
+    image: localhost:5000/mysql
+    volumes:
+      - ./setup:/docker-entrypoint-initdb.d
+#      - ./volumes/testdata/mysql:/testdata
+      - mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+
+#  phpmyadmin:
+#    image: localhost:5000/phpmyadmin
+#    ports:
+#      - "10001:80"
+#    links:
+#      - mysql:mysql
+#    environment:
+#      - MYSQL_USERNAME=root
+#      - MYSQL_ROOT_PASSWORD=secret
+#      - PMA_HOST=mysql
+#    depends_on:
+#      - mysql
+
+  gogs:
+    image: localhost:5000/gogs
+    volumes:
+      - gogs-data:/data
+    links:
+      - mysql:mysql
+    ports:
+      - "10022:22"
+      - "10000:3000"
+
+volumes:
+  mysql-data:
+    driver: local
+  gogs-data:
+    driver: local

@@ -23,13 +23,13 @@ docker-compose -f ../docker-compose.yml start payara
 
 
 # Delete the connection pool if it exists
-docker-compose exec payara /opt/payara41/bin/asadmin --user admin --passwordfile /opt/pwdfile delete-jdbc-resource jdbc/quote_db
-docker-compose exec payara /opt/payara41/bin/asadmin --user admin --passwordfile /opt/pwdfile delete-jdbc-connection-pool quote_dbConnectionPool
+docker-compose exec payara /opt/payara5/bin/asadmin --user admin --passwordfile /opt/pwdfile delete-jdbc-resource jdbc/quote_db
+docker-compose exec payara /opt/payara5/bin/asadmin --user admin --passwordfile /opt/pwdfile delete-jdbc-connection-pool quote_dbConnectionPool
 
 # When MySQL
 ## Create a JDBC Connection Pool
-docker-compose exec payara /opt/payara41/bin/asadmin --user admin --passwordfile /opt/pwdfile create-jdbc-connection-pool --datasourceclassname com.mysql.jdbc.jdbc2.optional.MysqlDataSource --restype javax.sql.ConnectionPoolDataSource --property portNumber=3306:password=secret:user=root:serverName=mysql:databaseName=quote quote_dbConnectionPool
-docker-compose exec payara /opt/payara41/bin/asadmin --user admin --passwordfile /opt/pwdfile create-jdbc-resource --connectionpoolid quote_dbConnectionPool jdbc/quote_db
+docker-compose exec payara /opt/payara5/bin/asadmin --user admin --passwordfile /opt/pwdfile create-jdbc-connection-pool --datasourceclassname com.mysql.jdbc.jdbc2.optional.MysqlDataSource --restype javax.sql.ConnectionPoolDataSource --property portNumber=3306:password=secret:user=root:serverName=mysql:databaseName=quote quote_dbConnectionPool
+docker-compose exec payara /opt/payara5/bin/asadmin --user admin --passwordfile /opt/pwdfile create-jdbc-resource --connectionpoolid quote_dbConnectionPool jdbc/quote_db
 
 #Cleanup
 #mvn clean
