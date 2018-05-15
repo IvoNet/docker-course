@@ -31,7 +31,6 @@ export class Quote implements Deserializable<Quote> {
     return this;
   }
 }
-
 ```
 
 * implement QuoteService (end-point: http://localhost:8080/back-end/rest/quote/)
@@ -54,7 +53,6 @@ export class QuoteService {
       .map(data => new Quote().deserialize(data));
   }
 }
-
 ``` 
 
 * app.component.html
@@ -64,9 +62,7 @@ export class QuoteService {
     <input type="text" value="{{search}}" #query/>
     <button type="submit" (click)="getQuote(query.value)">Quote</button>
 </div>
-
 <h2>{{quote.quote}}</h2>
-
 ```
 
 * app.component.ts
@@ -101,12 +97,13 @@ export class AppComponent {
 
 ```dockerfile
 FROM localhost:5000/python
-
 WORKDIR /app
 COPY dist ./
 VOLUME /app
-
 EXPOSE 8000
 ENTRYPOINT ["python", "/usr/local/lib/python2.7/SimpleHTTPServer.py"]
-
 ```
+
+* `docker build -t localhost:5000/quotes`
+* `docker push` (only if you want to commit to registry)
+* `docker run -it --rm -p 8000:8000 -v $(pwd)/dist:/app localhost:5000/quotes`
