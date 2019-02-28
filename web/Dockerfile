@@ -1,11 +1,10 @@
-FROM alpine
+FROM localhost:5000/alpine
 
 WORKDIR /app
 
 COPY package.json .
 
-RUN apk add --update \
-    nodejs \
+RUN apk add --update nodejs npm \
  && rm -rf /var/cache/apk/* \
  && npm install
 

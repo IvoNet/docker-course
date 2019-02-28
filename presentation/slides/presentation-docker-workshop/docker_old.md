@@ -104,7 +104,7 @@ Note:
 
 ---
 
-<img src="compose.png" style="width:100%;height:100%;display: block;margin: 0 auto;"/>
+<img src="docker-compose.png" style="width:100%;height:100%;display: block;margin: 0 auto;"/>
 
 ---
 
@@ -120,6 +120,7 @@ Note:
 --- 
 <!-- .slide: data-background="orange" -->
 
+https://www.ivowoltring.nl   
 https://www.ivonet.nl   
 Twitter: @ivonet  
 

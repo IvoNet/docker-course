@@ -14,11 +14,11 @@ registerDockerImageLocalRegistry() {
 cd ../mysql
 ./build.sh
 
-#registerDockerImageLocalRegistry mysql:5.7.21 mysql
-registerDockerImageLocalRegistry payara/server-full:5.181 payara
-registerDockerImageLocalRegistry alpine:3.7 alpine
-registerDockerImageLocalRegistry openjdk:8 jdk8
-registerDockerImageLocalRegistry node:9.6.1-alpine node
-registerDockerImageLocalRegistry phpmyadmin/phpmyadmin:4.6.4-1 phpmyadmin
+#registerDockerImageLocalRegistry mysql:5.7.25 mysql
+registerDockerImageLocalRegistry ivonet/payara:5.184 payara
+registerDockerImageLocalRegistry alpine:3.9 alpine
+registerDockerImageLocalRegistry ivonet/openjdk:8 jdk8
+registerDockerImageLocalRegistry node:11.10-alpine node
+registerDockerImageLocalRegistry phpmyadmin/phpmyadmin:4.7 phpmyadmin
 registerDockerImageLocalRegistry gogs/gogs:latest gogs
-registerDockerImageLocalRegistry python:2.7-alpine python
+registerDockerImageLocalRegistry ivonet/py3 python

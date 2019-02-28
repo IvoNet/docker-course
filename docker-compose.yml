@@ -27,6 +27,7 @@ services:
 
   payara:
     image: localhost:5000/back-end
+
     ports:
       - "8080:8080"
       - "4848:4848"
@@ -49,7 +50,7 @@ services:
 #    depends_on:
 #      - mysql
 #    volumes:
-#      - ./back-end/artifact:/opt/payara41/glassfish/domains/domain1/autodeploy
+#      - ./back-end/artifact:/opt/payara5/glassfish/domains/domain1/autodeploy
 
   web:
     build:

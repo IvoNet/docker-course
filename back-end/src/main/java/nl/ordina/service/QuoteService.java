@@ -69,7 +69,7 @@ public class QuoteService {
     @Produces(APPLICATION_JSON)
     public Response get(@PathParam("id") Integer id) {
         final Quote quote = em.find(Quote.class, id);
-        this.log.info(quote.toString());
+        this.log.info(quote == null? "No quote found" : quote.toString());
         return Response.ok(quote).build();
     }
 }
