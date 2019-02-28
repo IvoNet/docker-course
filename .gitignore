@@ -41,3 +41,6 @@ backup/
 package-lock.json
 
 volumes/
+*.zip
+*.tgz
+*.tar
