@@ -1,6 +1,6 @@
 FROM localhost:5000/server
 
-MAINTAINER IvoNet
+LABEL maintainer="IvoNet.nl"
 
 ADD back-end.war /opt/payara5/glassfish/domains/domain1/autodeploy/back-end.war
 

@@ -16,9 +16,6 @@ Ordina JTech
 # ?
 
 ---
-# Whaaat???
-
----
 
 > It works on my machine!
 
