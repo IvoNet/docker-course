@@ -1,0 +1,5 @@
+<div>
+    <input type="text" value="{{search}}" #query/>
+    <button type="submit" (click)="getKwetter(query.value)">Kwet</button>
+</div>
+<h2>{{kwetter.message}}</h2>

@@ -25,20 +25,8 @@ services:
     depends_on:
       - mysql
 
-  payara:
-    image: localhost:5000/back-end
-    ports:
-      - "8080:8080"
-      - "4848:4848"
-      - "8181:8181"
-      - "8009:8009"
-    links:
-      - mysql:mysql
-    depends_on:
-      - mysql
-
 #  payara:
-#    image: localhost:5000/server
+#    image: localhost:5000/back-end
 #    ports:
 #      - "8080:8080"
 #      - "4848:4848"
@@ -48,8 +36,21 @@ services:
 #      - mysql:mysql
 #    depends_on:
 #      - mysql
-#    volumes:
+
+  payara:
+    image: localhost:5000/server
+    ports:
+      - "8080:8080"
+      - "4848:4848"
+      - "8181:8181"
+      - "8009:8009"
+    links:
+      - mysql:mysql
+    depends_on:
+      - mysql
+    volumes:
 #      - ./back-end/artifact:/opt/payara5/glassfish/domains/domain1/autodeploy
+      - ./kwetter/artifact:/autodeploy
 
   web:
     build:
