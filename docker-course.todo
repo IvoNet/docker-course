@@ -1,0 +1,104 @@
+The Busy Developer’s Guide to Docker
+Ivo Woltring
+https://www.ivonet.nl 
+Twitter: @ivonet
+
+> It works on my machine
+> ...and we are shipping it :-)
+
+- imbusy
+- Installing docker (plz no windows <10)
+	- brew install docker
+	- install docker-compose
+- What is docker?
+	- VM vs Docker
+	- Image vs Container
+    - Architecture
+        - layers
+    - One thing and one thing good
+    - security
+        - base image
+        - root user
+        - updaten / upgraden
+- Why docker - Containerization?
+	- Why do developers care
+	    - A clean, safe, hygienic and portable runtime environment
+	    - No worries about missing dependencies, packages, and other pain points.
+	    - Run each app in its own isolated container, so you can run various versions of libraries and other containers
+	    - You can revert to "older" versions like a snap
+	    - Automate testing, integration and packaging
+	    - Reduce / Eliminated concerns about compatibility on other platforms
+	    - Handy tool to have even without the above, just for developpers
+	- Why Ops care
+	    - Make the entire lifecycle more efficient, consistent, and repeatable
+	    - increase the quality of code produced by developers
+	    - Eliminate inconsistencies between OTAP environments
+	    - Promote separation of concerns
+	    - significantly increase the speed and reliability or Continues Deployment and integration
+	- Why not VM or Cloud
+	    - Speed of deployment
+	    - Portability
+	    - Density & Performance
+	    - Cost
+	    - Size
+	    - Resources used
+- Commands	
+	- ps
+	- images
+	- rm
+	- rmi
+	- pull
+	- push
+	- run
+	- build
+	- stop
+	- exec
+	- volume
+	- network
+	- inspect
+	- history
+	- export (why not!)
+	- login
+
+- Dockerfile
+    - FROM
+    - ADD
+    - RUN
+    - COPY
+    - EXPOSE
+    - WORKDIR
+    - VOLUME
+    - ENTRYPOINT
+    - CMD
+    - ARG
+    - HEALTHCHECK
+    - LABEL
+    - ONBUILD
+    - SHELL
+    - STOPSIGNAL
+    - USER
+	
+- Demo / workshop
+	- Fun demo
+	- Demo
+		- Simple docker image
+		- existing big one :-)
+	- try to create your own docker image?
+		- do you have a project?
+			- javaee example
+		- Java
+		- Python
+		- Node
+
+- docker-compose.yml
+	- Whaat?
+	- version
+	- services
+	- network
+	- volumes
+
+- Demo / workshop
+	- create your own docker-compose.yml
+	
+
+
