@@ -1,4 +1,4 @@
-FROM mysql:5.7.25
+FROM mysql:5.7.27
 
 LABEL maintainer="Ivo Woltring <webmaster@ivonet.nl>"
 

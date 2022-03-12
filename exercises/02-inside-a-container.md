@@ -6,6 +6,8 @@ Search for and pull `alpine`.
 
 Get an interactive shell in an `alpine` container.
 
+https://github.com/IvoNet/docker-course
+
 ## Exercise 2
 
 List container's distribution and kernel.
